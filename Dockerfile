@@ -10,7 +10,7 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o /go/bin/app .
 # The stage at which the application is deployed
 FROM --platform=linux/arm64 alpine:3.16
 COPY --from=builder /go/bin/app /go/bin/app
-EXPOSE 8080
+EXPOSE 5000
 ENTRYPOINT ["/go/bin/app"]
 
 # The Dockerfile above is a multi-stage build. 
