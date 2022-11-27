@@ -21,7 +21,7 @@ _GET_ – Get an album by its ID, returning the album data as JSON.
 ### From a different command line window, use __curl__ to make a request to your running web service
 
 ```
-$ curl http://localhost:8080/albums \
+$ curl http://localhost:5000/albums \
     --include \
     --header "Content-Type: application/json" \
     --request "POST" \
@@ -31,7 +31,7 @@ $ curl http://localhost:8080/albums \
 ### Use __curl__ to retrieve the full list of albums, which you can use to confirm that the new album was added
 
 ```
-$ curl http://localhost:8080/albums \
+$ curl http://localhost:5000/albums \
     --header "Content-Type: application/json" \
     --request "GET"
 ```
